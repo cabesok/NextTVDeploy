@@ -14,10 +14,6 @@ router.get("/emisiones", authOk, emisionesController.emisiones);
 router.get("/emisiones/crear-emision", authOk, emisionesController.crearEmision);
 router.get("/emisiones/:id", authOk, emisionesController.verEmision);
 
-/* router.get("/creditos/buscar", creditosController.buscar); */
-//router.get("/creditos/edit/:id", creditosController.edit);
-//router.get("/creditos/detail/:id", creditosController.detail); 
-
 
 router.post("/emisiones/nuevaemision", emisionesController.nuevaEmision);
 router.delete("/emisiones/delete/:id", emisionesController.delete);

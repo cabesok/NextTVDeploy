@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-//const productsController = require("../controllers_db/productsController")
-//const home = require("../controllers/home");
+const authOk = require("../middlewares/authOk");
 
-router.get("/", (req, res) => res.render("home", {style: "home.css", title: "Home"}),);    
+
+router.get("/", authOk, (req, res) => res.render("home", {style: "home.css", title: "Home"}));    
 
 
 module.exports = router;

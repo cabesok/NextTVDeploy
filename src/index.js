@@ -36,6 +36,9 @@ app.use(session({secret: "Secreto", resave: false, saveUninitialized: false}));
 
 // App Routes
 
+const home = require("./routes/home");
+app.use(home); 
+
 const creditos = require("./routes/creditos");
 app.use(/* "/creditos", */ creditos);    
 
