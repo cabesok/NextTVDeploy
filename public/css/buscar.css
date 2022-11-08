@@ -1,0 +1,229 @@
+:root {
+
+    --gris-medio:#8C8C8C;
+    --gris-claro:#F3F3F3;
+    --dark:#120E21;
+    --red:#F20C36;
+    --secu-red:#EB3349;
+
+}
+
+/* COLORES */
+.gris-medio {
+    color: #8C8C8C;
+}
+
+.dark {
+    color: #120E21;
+}
+.red {
+    color: #F20C36;
+}
+.secundaryred {
+    color: #EB3349;
+}
+.gris-claro {
+    color:#F3F3F3;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display';
+
+}
+body {
+    background-color: #FAF9FE;
+}
+
+.body2 {
+    min-width: 375px;
+    max-width: 450px;
+    margin: auto;
+}
+
+
+header{
+    width: 320px;
+    height: 31px;
+    margin-top: 43px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 35px;
+}
+
+header form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header button {
+    background: none;
+    border: none;
+}
+
+header img{
+width: 30px;
+height: 30px;
+
+}
+
+
+h1 {
+width: 330px;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+font-style:normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 46px;
+}
+
+.filtro {
+    text-align: center;
+    margin-bottom: 25px ;
+}
+
+.lista-creditos {
+width: 330px;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.cabecera {
+width: 330px;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+
+}
+
+.cabecera div{
+width: 50%;
+gap: 10px;
+}
+
+.right{
+    text-align: right;
+}
+.nombre {
+font-weight: bold;
+font-size: 20px;
+line-height: 26px;
+}
+.cargo {
+font-weight: bold;
+font-size: 15px;
+line-height: 20px;
+}
+.localidad {
+font-weight: bold;
+font-size: 15px;
+line-height: 20px;
+}
+
+.fecha {
+font-weight: normal;
+font-size: 12px;
+line-height: 160%;
+}
+.credito {
+display: flex;
+flex-direction: column;
+margin-bottom:30px;
+margin-top:10px;
+border-color: #8C8C8C;
+border-bottom: 3px outset black;
+padding-bottom: 10px;
+}
+
+.descripcion {
+width: 100%;
+
+}
+
+
+footer {
+    position: fixed;
+   bottom: 30px;
+   right: 30px;
+}
+
+
+
+
+
+
+@media (min-width: 764px) {
+
+    .body2 {
+        min-width: 764px;
+        max-width: 764px;
+        
+    }
+    
+    header{
+        width: 320px;
+        height: 31px;
+        margin-top: 30px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    h1 {
+        
+        width: 500px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        font-style:normal;
+        font-weight: 900;
+        font-size: 35px;
+        
+        }
+
+    .lista-creditos {
+    
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+    
+    .credito {
+        border-color: #8C8C8C;
+        border-bottom: 3px outset black;
+        padding-bottom: 10px;
+    }
+
+    .cabecera {
+            
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        }
+        
+        .descripcion {
+            width: 100%;
+            margin-bottom: 30px;
+            
+            }
+        
+        
+            
+            
+}

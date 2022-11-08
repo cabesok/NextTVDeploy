@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ("../partials/head") %>
+
+<body>
+
+    <div class="body2">
+
+    
+    <header>
+        
+        <form action="/creditos/buscar" method="GET" >
+            <input type="search" name="search" placeholder="Buscar..." >
+            <button type="submit" >
+                <img src="/images/Search icon.png" class="gris-medio" alt="buscar">
+            </button>
+        </form>
+
+    </header>
+<div class="emisiones">
+    <a  href="/emisiones"> Emisiones Disponibles </a>
+</div>
+<h1 class="dark">Créditos recientes</h1>
+
+    <!-- <div>
+        <input type="" >
+    </div> -->
+
+    <div class="filtro" >
+        <form action="/creditos/filtrar" method="POST" >
+            <select name="programa" >
+                <!-- <option selected>Filtrar creditos</option> -->
+                <option value="0">Todos</option>
+                <option value="1">Informe 4</option>
+                <option value="2">Tal Cual</option>
+                <option value="3">Vivo El Jueves</option>
+            </select>
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+
+    <!-- <form method="post" action="">
+        <div align="center"> 
+          <p> 
+            <select name="select" size="1"  
+            style="FONT-SIZE: 10px; COLOR: #000000; BACKGROUND-COLOR: rgb(255,255,255)" 
+            onChange="window.open(this.options[this.selectedIndex].value,'_blank')">
+              <option selected>Filtrar creditos</option>
+              <option value="http://www.inta.gov.ar">Instituto Nacional de Tecnología 
+              Agropecuaria</option>
+              <option value="http://www.senasa.gov.ar">SENASA</option>
+              <option value="http://siiap.sagyp.mecon.ar">Sec de Agricultura, Ganadería, 
+              Pesca y Alimentación</option>
+              <option value="http://www.afip.gov.ar">AFIP - DGI</option>
+              <option value="http://www.bcra.gov.ar">Banco Central de la R.A.</option>
+              <option value="http://www.indec.mecon.ar">INDEC</option>
+            </select>
+          </p>
+          </div>
+      </form> -->
+
+<div class="showcase-componentes"></div>
+
+
+<section class="lista-creditos">
+
+    <% for (let i = 0; i < creditos.length; i++) { %>
+        
+        <article class="credito">
+
+            <div class="cabecera dark">
+                <div class="nombre"> <%= creditos[i].nombre %> </div>
+                <div class="right gris-medio"> <%=creditos[i].fecha %> </div>
+                <div class="cargo"> <%=creditos[i].cargo %> </div>
+                <div class="right"> <%=creditos[i].localidad %> </div>
+            </div>
+            <p class="descripcion gris-medio"> <%=creditos[i].descripcion %> </p>
+            
+            <div class="botones">
+                <form action="/creditos/utilizar/<%=creditos[i].id %>?_method=PUT" method="POST">
+                    <a href="/creditos/utilizar/<%=creditos[i].id %>"><button type="button" class="principal">Utilizar</button></a>
+                </form>    
+                <button type="button" class="secundario"> <a href="/creditos/modificarcredito/<%= creditos[i].id %>"> Modificar </a> </button>
+                <form action="/creditos/delete/<%=creditos[i].id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete"><i class="fas fa-trash-alt"></i></button>
+                </form>
+            </div>
+
+        </article>
+        
+    <% } %>
+
+</section>
+
+<%- include ("../partials/footer") %>
+
+
+<script src="../js/ventanamodal.js"></script>
+
+</div>
+
+</body>
+</html>
